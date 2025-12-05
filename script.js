@@ -10,7 +10,6 @@ function updateCounts(values){
     }
 }
 
-
 const BACKEND_URL = 'http://localhost:8000/api/counts';
 const UPDATE_INTERVAL = 300; 
 
@@ -85,3 +84,4 @@ function initializeDashboard() {
 
 
 initializeDashboard();
+
