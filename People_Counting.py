@@ -1,7 +1,6 @@
 import cv2
 import mediapipe as mp
 
-
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(
     min_detection_confidence=0.5,
@@ -87,4 +86,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
