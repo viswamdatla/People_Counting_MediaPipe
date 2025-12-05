@@ -1,0 +1,88 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --accent: #2b6ef6;
+    --muted: #6b7280;
+}
+
+/* Base layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: #111;
+}
+
+/* Center the dashboard vertically and horizontally */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 980px;
+    padding: 24px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: var(--accent);
+    text-align: center;
+}
+
+.boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.box {
+    /* make all boxes the same fixed width on larger screens */
+    flex: 0 0 340px; /* fixed width */
+    width: 340px;
+    max-width: 340px;
+    background: var(--card);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 8px 22px rgba(16,24,40,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+}
+
+.count {
+    font-size: 44px; /* larger counter */
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 10px;
+    transition: transform 200ms ease, color 200ms ease;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .boxes {
+        flex-direction: column;
+    }
+    .box {
+        /* when stacked on small screens, make boxes full width */
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
